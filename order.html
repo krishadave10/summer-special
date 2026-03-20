@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h2>🍧 Frosty Gola</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        
+    </nav>
+</header>
+<header>
+    <h2>🛒 Your Cart</h2>
+</header>
+
+<section class="order-container">
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="total-box">
+        <h3>Total: ₹<span id="total">0</span></h3>
+        <button onclick="clearCart()">Clear Cart 🌻</button>
+    </div>
+
+</section>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = 0;
+let output = "";
+
+cart.forEach(item => {
+    output += `<div class="order-card">
+                    <h4>${item.name}</h4>
+                    <p>₹${item.price}</p>
+               </div>`;
+    total += item.price;
+});
+
+document.getElementById("cartItems").innerHTML = output;
+document.getElementById("total").innerText = total;
+
+function clearCart() {
+    localStorage.removeItem("cart");
+    location.reload();
+}
+</script>
+
+</body>
+</html>
