@@ -1,22 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Order</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Cart | Frosty Gola Orders 🍧</title>
+
+<meta name="description" content="View your Frosty Gola cart and order your favorite ice gola flavors like mango, strawberry, and chocolate.">
+
+<meta name="keywords" content="frosty gola cart, order ice gola, gola order online, ice gola shop India">
+
+<meta name="author" content="Frosty Gola">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Frosty Gola Cart">
+<meta property="og:description" content="Check your cart and order delicious gola 🍧">
+<meta property="og:image" content="image/10.webp">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="image/favicon.ico">
+
 </head>
+
 <body>
+
+<!-- HEADER -->
 <header>
-    <h2>🍧 Frosty Gola</h2>
+    <h1>🍧 Frosty Gola</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-        
+        <a href="index.html" title="Home Page">Home</a>
+        <a href="products.html" title="View Products">Products</a>
+        <a href="contact.html" title="Contact Us">Contact</a>
     </nav>
 </header>
-<header>
-    <h2>🛒 Your Cart</h2>
-</header>
+
+<!-- MAIN -->
+<main>
+
+<h2>🛒 Your Cart</h2>
 
 <section class="order-container">
 
@@ -24,11 +47,26 @@
 
     <div class="total-box">
         <h3>Total: ₹<span id="total">0</span></h3>
+
         <button onclick="clearCart()">Clear Cart 🌻</button>
+        <button onclick="placeOrder()">Place Order 🚀</button>
     </div>
 
 </section>
 
+</main>
+
+<!-- SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ShoppingCart",
+ "name": "Frosty Gola Cart",
+ "description": "User cart for ordering ice gola products"
+}
+</script>
+
+<!-- SCRIPT -->
 <script>
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let total = 0;
@@ -49,7 +87,22 @@ function clearCart() {
     localStorage.removeItem("cart");
     location.reload();
 }
+
+function placeOrder(){
+    if(total === 0){
+        alert("Your cart is empty 😢");
+    } else {
+        alert("🎉 Order placed successfully! Total: ₹" + total);
+        localStorage.removeItem("cart");
+        location.reload();
+    }
+}
 </script>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Frosty Gola | Made with ❤️</p>
+</footer>
 
 </body>
 </html>
