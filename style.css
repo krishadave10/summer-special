@@ -405,3 +405,26 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.quote {
+    margin-top: 15px;
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.quotes {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.quotes p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff6f91;
+    font-weight: 500;
+}
