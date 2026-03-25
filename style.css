@@ -260,3 +260,12 @@ footer {
         gap: 10px;
     }
 }
+#successMsg {
+    display: none;
+    margin-top: 15px;
+    text-align: center;   /* center ma laavse */
+    color: green;
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 10px;
+}
