@@ -2,54 +2,62 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact Frosty Gola | Ice Gola Shop</title>
 
-<meta name="description" content="Contact Frosty Gola for delicious ice gola, flavored ice treats, and orders. Reach out for queries, feedback or orders.">
-
-<meta name="keywords" content="frosty gola contact, ice gola shop, gola near me, ice gola order, gola shop India">
-
-<meta name="author" content="Frosty Gola">
-
-<!-- Open Graph (Social Media) -->
-<meta property="og:title" content="Contact Frosty Gola">
-<meta property="og:description" content="Get in touch for tasty ice gola treats 🍧">
-<meta property="og:image" content="images/gola.jpg">
-<meta property="og:type" content="website">
-
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="images/favicon.ico">
-
 </head>
 
+<body>
+
+<!-- HEADER -->
 <header>
     <h2>🍧 Frosty Gola</h2>
     <nav>
         <a href="index.html">Home</a>
-           <a href="order.html">orders</a>
+        <a href="order.html">Orders</a>
         <a href="products.html">Products</a>
-       
-     
     </nav>
 </header>
 
+<!-- CONTACT FORM -->
 <section class="contact">
-    <form>
-        <h2>Contact Us 📞</h2>
+    <form onsubmit="showMessage(event)">
+    <h2>Contact Us 📞</h2>
 
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message"></textarea>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
 
-        <button type="submit">Send Message</button>
-    </form>
+    <button type="submit">Send Message</button>
+
+    <!-- ✅ MESSAGE AHI MUKO -->
+    <p id="successMsg">Thank You! 😊 Message sent successfully!</p>
+</form>
+
+    <!-- SUCCESS MESSAGE -->
+    <p id="successMsg" style="color: rgb(255, 255, 255); display: none; margin-top: 10px;">
+        Thank You! 😊 Message sent successfully!
+    </p>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Frosty Gola</p>
 </footer>
+
+<!-- SCRIPT -->
+<script>
+function showMessage(event) {
+    event.preventDefault();
+
+    document.getElementById("successMsg").style.display = "block";
+
+    document.querySelector(".contact form").reset();
+}
+</script>
 
 </body>
 </html>
