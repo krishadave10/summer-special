@@ -269,3 +269,33 @@ footer {
     padding: 10px;
     border-radius: 10px;
 }
+/* CONTACT BUTTON */
+.contact button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(45deg, #5d4037, #8d6e63); /* brown theme */
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* HOVER EFFECT */
+.contact button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(45deg, #3e2723, #6d4c41);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* CLICK EFFECT */
+.contact button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
